@@ -57,7 +57,7 @@ public class TimelessRepository {
     		BufferedWriter bufferW = new BufferedWriter(writer);
     		CSVPrinter printer = new CSVPrinter(bufferW, csvFileFormat)) { 
     			
-    			String date = time.getDateText();
+    			String date = time.getWeek();
     			String monday = Double.toString(time.getMondayHours());
     			String tuesday = Double.toString(time.getTuesdayHours());
     			String wednesday = Double.toString(time.getWednesdayHours());
@@ -101,7 +101,7 @@ public class TimelessRepository {
 			for (CSVRecord record : records) {
 				
 				String date = record.get(0);
-				entry.setDate(date);
+				entry.setWeek(date);
 				
 			    String monday = record.get(1);
 			    Double mondayHours = Double.parseDouble(monday);

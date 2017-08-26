@@ -21,7 +21,7 @@
     <tbody>
       <tr>
       <form method="post" action="tracker">
-        <td><input name="date" placeholder="mm/dd/yyyy" type="date" {{#tempDate}}value={{.}}{{/tempDate}} required></td>
+        <td><input name="week" placeholder="mm/dd/yyyy" type="text" {{#tempWeek}}value={{.}}{{/tempWeek}} required></td>
           <td><input required name="mondayHours" type="number" {{#tempMon}}value={{.}}{{/tempMon}} placeholder=0 ></td>
           <td><input required name="tuesdayHours" type="number" {{#tempTue}}value={{.}}{{/tempTue}} placeholder="0"></td>
           <td><input required name="wednesdayHours" type="number" {{#tempWed}} value={{.}}{{/tempWed}} placeholder="0"></td>
@@ -56,7 +56,7 @@
         <tr>
  	 {{ #submittedEntry }}
  	  <tr>
- 	 		<td>{{ dateText }}</td>
+ 	 		<td>{{ week }}</td>
     		<td>{{ mondayHours }}</td>
     		<td>{{ tuesdayHours }}</td>
     		<td>{{ wednesdayHours }}</td>

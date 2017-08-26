@@ -48,7 +48,7 @@ public class TimelessController {
     	String totalHours = Double.toString(time.calculateTotalHours());
     	
     	if(action.equals("update")) {
-    		mv.addObject("tempDate", time.getDateText());
+    		mv.addObject("tempWeek", time.getWeek());
     		mv.addObject("tempMon", time.getMondayHours());
     		mv.addObject("tempTue", time.getTuesdayHours());
     		mv.addObject("tempWed", time.getWednesdayHours());

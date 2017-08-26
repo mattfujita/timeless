@@ -10,16 +10,15 @@ public class Timeless {
 	private double thursdayHours;
 	private double fridayHours;
 	private double totalHours;
-	private String date;
-	SimpleDateFormat dates = new SimpleDateFormat();
+	private String week;
 	
-	public void setDate(String date) {
-		this.date = date;
+	public void setWeek(String week) {
+		this.week = week;
 		//this.date = DateFormat.getDateInstance().format(date);
 	}
 	
-	public String getDateText() {
-		return date;
+	public String getWeek() {
+		return week;
 	}
 	
 	public double getMondayHours() {
