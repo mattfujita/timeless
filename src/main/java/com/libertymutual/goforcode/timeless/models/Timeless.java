@@ -1,8 +1,6 @@
 package com.libertymutual.goforcode.timeless.models;
-
+import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.Stack;
 
 public class Timeless {
 
@@ -13,21 +11,32 @@ public class Timeless {
 	private double fridayHours;
 	private double totalHours;
 	private String date;
+	SimpleDateFormat dates = new SimpleDateFormat();
 	
-	public void setMondayHours(double mondayHours) {
-		this.mondayHours += mondayHours; 
+	public String getDateText() {
+		return date;
+	}
+	
+	public void setDate(String date) {
+		this.date = date;
+		//this.date = DateFormat.getDateInstance().format(date);
 	}
 	
 	public double getMondayHours() {
 		return mondayHours;
 	}
 	
-	public void setTuesdayHours(double tuesdayHours) {
-		this.tuesdayHours += tuesdayHours; 
+	public void setMondayHours(double mondayHours) {
+		this.mondayHours = mondayHours; 
+	
 	}
 	
 	public double getTuesdayHours() {
 		return tuesdayHours;
+	}
+	
+	public void setTuesdayHours(double tuesdayHours) { 
+		this.tuesdayHours = tuesdayHours; 
 	}
 
 	public double getWednesdayHours() {
@@ -54,8 +63,10 @@ public class Timeless {
 		this.fridayHours = fridayHours;
 	}
 	
-	public void calculateTotalHours() {
-		totalHours += (mondayHours + tuesdayHours + wednesdayHours + thursdayHours + fridayHours);
+	public double calculateTotalHours() {
+		totalHours = (mondayHours + tuesdayHours + wednesdayHours + thursdayHours + fridayHours);
+		
+		return totalHours;
 	}
 
 	public double getTotalHours() {
@@ -64,6 +75,6 @@ public class Timeless {
 
 	public void setTotalHours(double totalHours) {
 		this.totalHours = totalHours;
-	}
+	} 
 
 }
