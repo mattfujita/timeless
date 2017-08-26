@@ -13,13 +13,13 @@ public class Timeless {
 	private String date;
 	SimpleDateFormat dates = new SimpleDateFormat();
 	
-	public String getDateText() {
-		return date;
-	}
-	
 	public void setDate(String date) {
 		this.date = date;
 		//this.date = DateFormat.getDateInstance().format(date);
+	}
+	
+	public String getDateText() {
+		return date;
 	}
 	
 	public double getMondayHours() {
