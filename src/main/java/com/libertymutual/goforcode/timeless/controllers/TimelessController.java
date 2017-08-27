@@ -30,6 +30,9 @@ public class TimelessController {
     
     @GetMapping("")
     public String redirectToApplication() {
+    	
+    	//mv.addObject("rowEntry", row);
+    	
         return "redirect:/tracker";
     }
     
@@ -48,6 +51,9 @@ public class TimelessController {
     	String totalHours = Double.toString(time.calculateTotalHours());
     	
     	if(action.equals("update")) {
+    		
+    		repository.update(time);
+    		
     		mv.addObject("tempWeek", time.getWeek());
     		mv.addObject("tempMon", time.getMondayHours());
     		mv.addObject("tempTue", time.getTuesdayHours());
@@ -56,10 +62,7 @@ public class TimelessController {
     		mv.addObject("tempFri", time.getFridayHours());
     		mv.addObject("totalHours", totalHours);
     		
-    		repository.update(time);
     		mv.addObject("submittedEntry", submission);
-
-    		mv.addObject("rowEntry", row);
 
     	} else if(action.equals("submit")) {
     		
@@ -70,6 +73,5 @@ public class TimelessController {
     	}
     	return mv;
     }
-
 
 }

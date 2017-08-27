@@ -100,8 +100,8 @@ public class TimelessRepository {
 			
 			for (CSVRecord record : records) {
 				
-				String date = record.get(0);
-				entry.setWeek(date);
+				String week = record.get(0);
+				entry.setWeek(week);
 				
 			    String monday = record.get(1);
 			    Double mondayHours = Double.parseDouble(monday);

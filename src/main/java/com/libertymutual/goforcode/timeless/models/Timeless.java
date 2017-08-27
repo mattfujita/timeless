@@ -14,7 +14,6 @@ public class Timeless {
 	
 	public void setWeek(String week) {
 		this.week = week;
-		//this.date = DateFormat.getDateInstance().format(date);
 	}
 	
 	public String getWeek() {
